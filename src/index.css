@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@font-face {
+  font-family: 'Helvetica Rounded Bold';
+  src: url('/path/to/fonts/HelveticaRounded-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Helvetica Rounded';
+  src: url('/path/to/fonts/HelveticaRounded-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}

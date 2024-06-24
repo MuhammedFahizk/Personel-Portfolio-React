@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../Component/Button';
 import Nav from '../Component/Nav';
 
@@ -24,7 +23,7 @@ const HeroPage = () => {
               React js
             </div>
             <div className="md:w-[300px] md:mx-0 mx-20 relative z-30">
-              <img className="rounded-3xl shadow-md md:rotate-12 sm:rotate-6 md:h-[400px]" src='https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&' alt="ses" />
+              <img className="rounded-3xl shadow-md md:rotate-6 sm:rotate-6 md:h-[400px]" src='../images/HeroImage.jpg' alt="ses" />
             </div>
             <div className='z-40 bg-[#A6A001] text-black px-4 dark:text-black rounded-sm mb-40 shadow-lg absolute top-60 md:-right-10 right-0 '>
               Express js

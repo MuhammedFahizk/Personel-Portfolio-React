@@ -40,15 +40,15 @@ function App() {
           width="100%"
           height="100"
           // viewBox="100 10 100 100"
-          style={{ position: 'fixed', top: 18, left: 0 }}
+          style={{ position: 'fixed', top: 18, left: 0, zIndex:12 }}
       >
           <motion.path
               // d="M 0, 50 a 25, 25 0 1,0 50,0 a 25, 25 0 1,0 -50,0" // Adjusted path to fit within the viewBox
               style={{ pathLength: scrollYProgress }}
-              d="M 0, 50 L 1300, 50" // Line path from (10, 50) to (90, 50)
+              d="M 0, 50 L 1300, 50"
               stroke="#A6A001"
-              fill='transparent' // Use transparent fill to see the stroke
-              strokeWidth="5" // Optional: adjust stroke width for better visibility
+              fill='transparent'
+              strokeWidth="3"
           />
       </motion.svg>
      <RouterProvider router={router} />

@@ -77,11 +77,11 @@ const Skill = () => {
   return (
     <div className="md:mx-20">
       <h2 style={{color:'#A6A001',}} className="text-4xl font-bold mb-6 text-center dark:text-white">Skills</h2>
-      <div  className="grid md:grid-cols-5 grid-cols-2 gap-1">
+      <div  className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
         {renderSkills(skills)}
       </div>
       <h2 style={{color:'#A6A001'}} className="text-4xl font-bold mb-6 mt-10 text-center dark:text-white">Tools</h2>
-      <div className="grid md:grid-cols-5 grid-cols-2 gap-1">
+      <div  className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
         {renderSkills(tools)}
       </div>
     </div>

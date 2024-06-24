@@ -34,13 +34,13 @@ const Services = () => {
 
   return (
     
-    <div className="md:px-20 py-10 dark:text-white md:flex  px-5 items-center text-white justify-center">
-      <div className="mt-10 sm:block md:hidden ">
-        <h1 className="text-3xl font-rounded font-bold text-center my-4 opacity-20 text-black">SERVICES</h1>
+    <div className="py-10 dark:text-white lg:flex  px-5 items-center text-white  justify-center">
+      <div className="mt-10 sm:block lg:hidden ">
+        <h1 className="text-3xl font-rounded font-bold text-center my-4 opacity-20 text-black dark:text-white">SERVICES</h1>
       </div>
-      <div className="md:grid md:grid-cols-3 md:gap-8 flex flex-col items-center ">
+      <div className="md:grid md:grid-cols-3 lg:gap-9 md:gap-10 justify-center   flex flex-col items-center ">
         {services.map((item, index) => (
-          <div key={index} style={{backgroundColor: '#1E1E1E'}} className="flex flex-col rounded-lg justify-center items-center mb-10 shadow-lg p-5 w-full md:w-[250px]">
+          <div key={index} style={{backgroundColor: '#1E1E1E'}} className="flex flex-col rounded-lg justify-center  items-center mb-10 shadow-lg p-5 w-full md:w-[250px]">
             <div className="flex justify-center md:mb-4">
               {item.icons.map((icon, iconIndex) => (
                 <div key={iconIndex} className="mx-1">
@@ -55,8 +55,8 @@ const Services = () => {
           </div>
         ))}
       </div>
-      <div className="mb-10 hidden md:block ">
-        <h1 className="rotate-90 text-3xl font-rounded font-bold opacity-20 text-black">SERVICES</h1>
+      <div className="mb-10 hidden lg:block ">
+        <h1 className="rotate-90 text-3xl font-rounded font-bold opacity-20 text-black dark:text-white">SERVICES</h1>
       </div>
     </div>
   );

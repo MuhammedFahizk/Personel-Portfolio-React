@@ -66,7 +66,7 @@ const Skill = () => {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, threshold: 0.8 }}
-        className="col-span-1 flex flex-col justify-center items-center bg-white dark:bg-dark-400 rounded-lg shadow-lg p-2 py-4 hover:text-yellow-900 m-3 "
+        className="col-span-1 z-10 flex flex-col justify-center items-center bg-white dark:bg-dark-400 rounded-lg shadow-lg p-2 py-4 hover:text-yellow-900 m-3 "
       >
         <skill.icon className="text-4xl mb-2" style={{ color: skill.color }} />
         <h2 className="text-xl font-bold text-center">{skill.name}</h2>
@@ -75,8 +75,8 @@ const Skill = () => {
   };
 
   return (
-    <div className="md:mx-20">
-      <h2 style={{color:'#A6A001',}} className="text-4xl font-bold mb-6 text-center dark:text-white">Skills</h2>
+    <div className="md:mx-20  z-50">
+      <h2 style={{color:'#A6A001',}} className=" text-4xl font-bold mb-6 text-center dark:text-white">Skills</h2>
       <div  className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
         {renderSkills(skills)}
       </div>

@@ -1,5 +1,6 @@
 import React from 'react';
 import { IoIosArrowDropright } from "react-icons/io";
+import { Link } from 'react-router-dom';
 
 const Button = ({ value, backgroundColor = '#A6A001', size = 'sm', showArrow = true, icon: Icon = IoIosArrowDropright }) => {
   const sizeClasses = {
@@ -9,7 +10,7 @@ const Button = ({ value, backgroundColor = '#A6A001', size = 'sm', showArrow = t
   };
 
   return (
-    <div className='flex items-center '>
+    <Link to={'/about'} className='flex items-center '>
       <div 
         className={`rounded-full flex items-center justify-center absolute z-10  ${sizeClasses[size]}`}
         style={{ backgroundColor }}
@@ -20,7 +21,7 @@ const Button = ({ value, backgroundColor = '#A6A001', size = 'sm', showArrow = t
           <span className='mr-1'>{value}</span>
           {showArrow && <Icon className='ml-1' />}
         </span>
-    </div>
+    </Link>
   );
 }
 

@@ -1,6 +1,6 @@
 import Button from '../Component/Button';
+import CommonBt from '../Component/CommonBt';
 import Nav from '../Component/Nav';
-
 const HeroPage = () => {
   return (
     <div className='dark:text-white text-white'>
@@ -13,7 +13,10 @@ const HeroPage = () => {
           <h1 className='md:text-4xl text-2xl font-semiBold'>I'm <span style={{color:'#A6A001'}}>Fahiz</span></h1>
           <h1 className='md:text-4xl text-2xl font-semibold'>A MERN Stack Developer</h1>
           <p className='md:w-4/6 text-sm'>Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops with composable commerce architecture.</p>
+          <div className='flex  gap-4'>
           <Button value={'About '} />
+          <CommonBt/>
+          </div>
         </div>
 
         <div className='md:w-1/2 flex justify-center items-center relative my-10'>
@@ -32,7 +35,7 @@ const HeroPage = () => {
         </div>
       </div>
       
-      <h1 className="text-4xl font-bold mb-4 rotate-90 hidden md:block text-yellow-400 opacity-10 mt-40 "> MERN Stack Developer</h1>
+      <h1 className="text-4xl font-bold mb-1 rotate-90 hidden md:block text-yellow-400 opacity-10  "> MERN Stack Developer</h1>
       {/* <h1 className="text-4xl font-bold mb-4 rotate-90 opacity-20 ms-10 "> Fahiz K</h1> */}
       
     </div>

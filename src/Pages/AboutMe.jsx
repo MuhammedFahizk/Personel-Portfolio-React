@@ -2,13 +2,34 @@
 import { useEffect } from "react";
 import Nav from "../Component/Nav";
 import Skill from "../Pages/Skill.jsx";
-
-import { FaGithub, FaLinkedin ,FaInstagram, FaWhatsapp} from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
+import {  motion } from "framer-motion";
 const AboutMe = () => {
   useEffect(() => {
     // Simulate fetching data from an API or data file
   }, []);
-
+  const icons = [
+    {
+      icon: FaGithub,
+      link: "https://github.com/fahiz-mavoor",
+      color: '#FFFFFF'
+    },
+    {
+      icon: FaLinkedin,
+      link: "https://www.linkedin.com/in/muhammed-fahiz-96726b287/",
+      color: '#0072b1'
+    },
+    {
+      icon: FaInstagram,
+      link: "https://www.instagram.com/",
+      color: '#e1306c'
+    },
+    {
+      icon: FaWhatsapp,
+      link: "https://api.whatsapp.com/send?+919961130563",
+      color: '#34af23'
+    },
+  ];
   return (
     <>
       <Nav />
@@ -27,13 +48,36 @@ const AboutMe = () => {
                   src="../images/HeroImage.jpg"
                   alt="Profile"
                 />
-                <div className="absolute start-[300px] rounded p-1 flex flex-col gap-3  bg-[#08080879] ">
-                  <FaGithub className="text-2xl"/>
-                  <FaLinkedin className="text-2xl text-[#0762C8]" />
-                  <FaInstagram className="text-2xl text-[#cd486b]" />
-                  <FaWhatsapp className="text-2xl text-[#25D366]" />
+                <div className="absolute start-[300px] rounded p-1 flex flex-col gap-3  bg-[#080808bb] ">
+                  {icons.map((icon, index) => (
+                  <motion.div
+                  key={index}
+                    whileHover={{ scale: 1.2, rotate: 45 }}
+                    whileTap={{
+                      scale: 0.8,
+                      rotate: -12,
+                      borderRadius: "100%",
+                    }}
+                  >
+                      <a
+                      href={icon.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      >
+                        <icon.icon
+                        size={30}
+                        style={{color: icon.color,}}
+                        className={`text-['#000] hover:text-[${icon.color}] transition duration-300
+                        ease-in-out`}
+                        />
+                      </a>
 
-
+                  </motion.div>
+                    ))}
+                  {/* <FaInstagram className="text-2xl text-[#cd486b]" />
+                  <FaLinkedin className="text-2xl text-[#0762C8]  " />
+                  <FaGithub className="text-2xl" />
+                  <FaWhatsapp className="text-2xl text-[#25D366]" /> */}
                 </div>
               </div>
               <div className="bg-gray-800 bg-opacity-80 p-6 rounded-3xl h-fit w-full md:w-1/2 lg:w-2/3">

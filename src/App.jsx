@@ -10,6 +10,7 @@ import {
 import './App.css'
 import Home from './Pages/Home'
 import AboutMe from "./Pages/AboutMe";
+import Projecta from "./Pages/Projects";
 function App() {
   const { scrollYProgress } = useScroll()
 
@@ -24,6 +25,12 @@ function App() {
       path: '/home',
       element: (
         <Home/>
+      )
+    },
+    {
+      path: '/projects',
+      element: (
+        <Projecta/>
       )
     },
     {

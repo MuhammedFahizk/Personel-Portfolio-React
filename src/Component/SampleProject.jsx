@@ -5,7 +5,7 @@ import { CiCirclePlus } from "react-icons/ci";
 import "aos/dist/aos.css";
 const SampleProject = () => {
   const items = [
-    {
+    { 
       id: 10,
       title: "Drive Wave",
       image: "../images/DriveWave.png",

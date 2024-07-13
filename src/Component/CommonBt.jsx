@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 const CommonBt = () => {
   return (
-    <Link  className="bg-[#A6A001] px-2 p-1 rounded-lg">Download CV</Link>
+    <a href="/Muhammed_Fahiz_resume.pdf" className="bg-[#A6A001] px-2 p-1 rounded-lg" download>Download CV</a>
   )
 }
 

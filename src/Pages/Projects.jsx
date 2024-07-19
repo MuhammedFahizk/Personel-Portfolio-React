@@ -87,11 +87,6 @@ const Projects = () => {
           >
             <div className="grid md:grid-cols-3 grid-col-1 gap-4">
               {filteredItems.map((item) => (
-                // <div key={item.id} className="w-full h-full p-3 flex flex-col scroll-smooth rounded-lg shadow-2xl items-start justify-start">
-                //   <img src={item.image} alt={item.title} className="w-full h-full object-cover rounded-lg" />
-                //   <h2 className="text-xl font-bold mt-4">{item.title}</h2>
-                //   <p className="text-sm italic">{item.subtitle}</p>
-                // </div>
                 <Card
                   key={item.id}
                   style={{
@@ -100,21 +95,17 @@ const Projects = () => {
                   cover={
                     <img
                       alt="example"
-                     src={item.image}
-                    className="h-40"
+                      src={item.image}
+                      className="h-48"
                     />
                   }
-                  // actions={[
-                  //   <SettingOutlined key="setting" />,
-                  //   <EditOutlined key="edit" />,
-                  //   <EllipsisOutlined key="ellipsis" />,
-                  // ]}
                 >
                   <Meta
-      // avatar={<Avatar src="https://api.dicebear.com/7.x/miniavs/svg?seed=8" />}
-      title={item.title}
-      description={item.description}
-    />
+                  
+                    className="meta-description h-40"
+                    title={item.title}
+                    description={item.description}
+                  />
                 </Card>
               ))}
             </div>

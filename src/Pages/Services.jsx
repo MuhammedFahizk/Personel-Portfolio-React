@@ -42,7 +42,7 @@ const Services = () => {
   ];
 
   return (
-    <div className="py-10 dark:text-white lg:flex px-5 items-center text-white justify-center">
+    <div className="py-10 md:2 mt-40 md:mt-0    dark:text-white lg:flex px-5 items-center text-white justify-center">
       <div className="mt-10 sm:block lg:hidden">
         <h1 className="text-3xl font-rounded font-bold text-center my-4 opacity-20 text-black dark:text-white">SERVICES</h1>
       </div>

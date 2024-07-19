@@ -2,7 +2,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CiCirclePlus } from "react-icons/ci";
 // import AOS from 'aos';
+import { FaArrowRightLong } from "react-icons/fa6";
+
+import { Button,  } from 'antd';
 import "aos/dist/aos.css";
+import { Link } from "react-router-dom";
+
 const SampleProject = () => {
   const items = [
     { 
@@ -105,8 +110,12 @@ const SampleProject = () => {
               {/* <motion.h5>{item.subtitle}</motion.h5> */}
             </motion.div>
           ))}
-        
+       
       </div>
+      <Button className="w-40 flex shadow-lg items-center h-fit mx-24 ms-auto">
+          <Link to="/projects">View All Projects</Link>
+          <FaArrowRightLong/>
+        </Button>
     </>
   );
 };

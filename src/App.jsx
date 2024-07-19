@@ -1,6 +1,5 @@
 import { createRoot } from "react-dom/client";
 import { motion, useScroll } from "framer-motion"
-
 import {
   createBrowserRouter,
   RouterProvider,
@@ -11,6 +10,7 @@ import './App.css'
 import Home from './Pages/Home'
 import AboutMe from "./Pages/AboutMe";
 import Projecta from "./Pages/Projects";
+import Nav from "./Component/Nav";
 function App() {
   const { scrollYProgress } = useScroll()
 
@@ -58,6 +58,7 @@ function App() {
               strokeWidth="3"
           />
       </motion.svg>
+    
      <RouterProvider router={router} />
 
     </>

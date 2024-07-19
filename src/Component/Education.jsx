@@ -10,10 +10,10 @@ const Education = () => {
 
   return (
     <>
-      <div className='my-20 w-full flex flex-col items-center h-full justify-center  '>
+      <div className='my-20 w-full flex flex-col items-center text-black dark:text-white h-full justify-center  '>
         <h1 className='md:text-center text-2xl my-10 font-bold'>Education</h1>
         <Timeline
-          className=''
+          className='dark:text-white'
           mode={mode}
           items={[
             {

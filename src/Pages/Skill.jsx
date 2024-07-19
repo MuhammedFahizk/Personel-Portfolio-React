@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
 import { FaHtml5, FaCss3Alt, FaNode, FaReact, FaAws, FaGitAlt, FaGithub } from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiExpress, SiMongodb, SiMongoose, SiJsonwebtokens, SiAxios, SiPostman, SiAmazonroute53, SiRazorpay, SiHandlebarsdotjs, SiRedux, SiReduxsaga, SiBootstrap, SiEjs, SiChartdotjs, SiNginx, SiVercel, } from "react-icons/si";
+import { SiExpress, SiMongodb, SiMongoose, SiJsonwebtokens, SiAxios, SiPostman, SiAmazonroute53, SiRazorpay, SiHandlebarsdotjs, SiRedux, SiReduxsaga, SiBootstrap, SiEjs, SiChartdotjs, SiNginx,SiMediamarkt, SiVercel, } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FiFigma } from "react-icons/fi";
-import { CiMail } from "react-icons/ci";
+import { CiMail, CiFileOn } from "react-icons/ci";
 
 
 const skills = [
@@ -21,7 +21,7 @@ const skills = [
   { id: 11, name: "Redux Toolkit", icon: SiReduxsaga, color: "#764ABC" },
   { id: 12, name: "Bootstrap", icon: SiBootstrap, color: "#563D7C" },
   { id: 13, name: "EJS", icon: SiEjs, color: "#A91E50" },
-  { id: 14, name: "Media Queries", icon: SiMongodb, color: "#47A248" },
+  { id: 14, name: "Media Queries", icon: SiMediamarkt, color: "#47A248" },
   { id: 15, name: "Chart.js", icon: SiChartdotjs, color: "#FF6384" },
 ];
 
@@ -36,7 +36,7 @@ const tools = [
   { id: 23, name: "Handlebars", icon: SiHandlebarsdotjs, color: "#000000" },
   { id: 24, name: "Git", icon: FaGitAlt, color: "#F05032" },
   { id: 25, name: "GitHub", icon: FaGithub, color: "#181717" },
-  { id: 26, name: "Multer", icon: SiMongodb, color: "#47A248" },
+  { id: 26, name: "Multer", icon: CiFileOn, color: "#00fede" },
   { id: 27, name: "Nodemailer", icon: CiMail, color: "#0073AA" },
   { id: 28, name: "Nginx", icon: SiNginx, color: "#009639" },
   { id: 29, name: "Vercel", icon: SiVercel, color: "#000000" },

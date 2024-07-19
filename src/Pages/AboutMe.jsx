@@ -4,6 +4,8 @@ import Nav from "../Component/Nav";
 import Skill from "../Pages/Skill.jsx";
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import {  motion } from "framer-motion";
+import Education from "../Component/Education.jsx";
+
 const AboutMe = () => {
   useEffect(() => {
     // Simulate fetching data from an API or data file
@@ -84,7 +86,7 @@ const AboutMe = () => {
                 <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hello!
-                  My name is uhammed Fahiz k, and I'm a MERN Stack DEvoplepor
+                  My name is Muhammed Fahiz k, and I'm a MERN Stack Devoplepor
                   from Calicut. I graduated with a BCA from the University of
                   calicut, where I built a strong foundation in computer science
                   and software development.
@@ -124,8 +126,8 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div>
-          <h1>Education</h1>
+        <div className="flex justify-start    ">
+        <Education/>
         </div>
       </div>
       <Skill />

@@ -105,51 +105,7 @@ const SampleProject = () => {
               {/* <motion.h5>{item.subtitle}</motion.h5> */}
             </motion.div>
           ))}
-        <AnimatePresence>
-          {selectedId && selectedItem && (
-            <motion.div
-              key={selectedId}
-              layoutId={selectedId}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 1, scale: 0.8 }}
-              className="fixed inset-80 md:inset-x-0 inset-y-10 mt-10 p-2 m-  md:bg-[#0000] bg-opacity-100 z-40 flex justify-center items-center"
-              onClick={() => setSelectedId(null)}
-            >
-              <motion.div
-                initial={{ opacity: 1 }}
-                animate={{ opacity: 1, scale: 0.8 }}
-                exit={{ opacity: 0, scale: 0.1 }}
-                // style={{ backgroundColor: '#A6A001' }}
-                className="bg-[#423e1675] z-40 p-5 w-screen flex flex-col justify-center items-center rounded-lg max-w-lg text-center  gap-2 "
-                onClick={(e) => e.stopPropagation()}
-              >
-                {selectedItem.image && (
-                  <img
-                    src={selectedItem.image}
-                    className=" flex-shrink-0  "
-                    alt={selectedItem.title}
-                  />
-                )}
-                <div className="flex flex-col justify-between  ">
-                  <CiCirclePlus
-                    className=" cursor-pointer text-2xl"
-                    onClick={() => setSelectedId(null)}
-                  />
-                  <motion.h5 className="text-2xl text-center">
-                    {selectedItem.title}
-                  </motion.h5>
-                  {/* <motion.h2 className=" text-start">
-                  {selectedItem.subtitle}
-                </motion.h2> */}
-                  <motion.p className=" text-start">
-                    {selectedItem.description}
-                  </motion.p>
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+        
       </div>
     </>
   );

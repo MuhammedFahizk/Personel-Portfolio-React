@@ -81,20 +81,20 @@ const Nav = () => {
         className={`md:flex items-center gap-4 ${isMenuOpen ? 'block absolute' : 'hidden'} inset-0 top-16  left-0 bg-gray-800 md:bg-transparent md:static md:top-auto md:left-auto md:space-x-8 md:w-auto md:flex-row md:mt-0`}
         id="navbar-menu"
       >
-        <div className="  md:hidden  flex-col p-4 md:p-0 font-medium border border-gray-100 rounded-lg bg-gray-50 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <div className="  md:flex  md:flex-row  flex-col p-4 md:p-0 font-medium border border-gray-100  rounded-lg  bg-gray-800 md:bg-transparent md:border-0  dark:bg-gray-800 md:dark:bg-transparent dark:border-gray-700">
           {navItems.map((item, index) => (
             <Link
               to={`/${item.toLowerCase()}`}
               key={index}
-              className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
+              className="block py-2 px-3  rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 text-white  dark:text-white dark:hover:bg-gray-700 dark:hover:text-white"
               aria-current={item === 'Home' ? 'page' : undefined}
             >
               {item}
             </Link>
           ))}
-          <div className="flex flex-col md:flex-row gap-4 m-3 md:mt-0">
+          <div className="flex flex-col md/:hidden gap-4 m-3 md:mt-0">
           
-          <Button value={'Message'} />
+          <Button value={'Hire Me'} />
         </div>
         </div>
 
@@ -105,7 +105,7 @@ const Nav = () => {
             onChange={handleThemeCheck}
             size={20}
           />
-          <Button value={'Message'} />
+          <Button value={'Hire Me'} to={'/Contact'}/>
         </div>
       </div>
     </nav>

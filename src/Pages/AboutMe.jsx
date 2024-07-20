@@ -5,7 +5,7 @@ import Skill from "../Pages/Skill.jsx";
 import { FaGithub, FaLinkedin, FaInstagram, FaWhatsapp } from "react-icons/fa";
 import {  motion } from "framer-motion";
 import Education from "../Component/Education.jsx";
-
+import Contact from "../Component/Contact.jsx";
 const AboutMe = () => {
   useEffect(() => {
     // Simulate fetching data from an API or data file
@@ -131,6 +131,7 @@ const AboutMe = () => {
         </div>
       </div>
       <Skill />
+      <Contact/>
     </>
   );
 };

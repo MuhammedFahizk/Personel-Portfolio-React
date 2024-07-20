@@ -9,8 +9,9 @@ import {
 import './App.css'
 import Home from './Pages/Home'
 import AboutMe from "./Pages/AboutMe";
-import Projecta from "./Pages/Projects";
 import Nav from "./Component/Nav";
+import Contact from "./Component/Contact";
+import Projects from "./Pages/Projects";
 function App() {
   const { scrollYProgress } = useScroll()
 
@@ -30,13 +31,19 @@ function App() {
     {
       path: '/projects',
       element: (
-        <Projecta/>
+        <Projects/>
       )
     },
     {
       path: '/About',
       element: (
         <AboutMe/>
+      )
+    },
+    {
+      path: '/Contact',
+      element: (
+        <Contact/>
       )
     }
   ])

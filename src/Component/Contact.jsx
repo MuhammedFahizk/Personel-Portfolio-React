@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { message, Button } from 'antd';
 import { CiLocationOn, CiPhone, CiMail } from 'react-icons/ci';
 import SocialMEdiaLinks from './SocialMEdiaLinks';
-
+import { motion } from 'framer-motion';
 const Contact = () => {
   const scriptUrl = import.meta.env.VITE_SCRIPT_URL;
   const formRef = useRef(null);
@@ -26,18 +26,38 @@ const Contact = () => {
         console.log(err);
       });
   };
-
+  const cardVariants = {
+    offscreen: {
+      y: 300,
+    },
+    onscreen: {
+      y: 0,
+      rotate: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.4,
+        duration: 0.8,
+      },
+    },
+  };
   return (
-    <div className='grid md:grid-cols-2 h-full items-center grid-cols-1 md:mx-20 gap-6 my-5 border rounded-lg p-10 text-black dark:text-white'>
-      <div className='mr-10'>
+    <motion.div
+    variants={cardVariants}
+    initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ once: true, threshold: 0.8 }}
+     className='grid  md:grid-cols-2 h-screen items-center grid-cols-1 md:mx-20 gap-6 my-5 border rounded-lg p-10 text-black dark:text-white'>
+      <motion.div
+      variants={cardVariants}
+       className='mr-10'>
         <p>Contact Us</p>
         <h1 className='text-2xl font-bold'>Get In Touch With Us</h1>
         <p className='text-md font-semibold my-4 me-20'>
           Hello! My name is Muhammed Fahiz k, and I'm a MERN Stack Developer from Calicut. I graduated with a BCA from the University of Calicut.
         </p>
         <SocialMEdiaLinks/>
-      </div>
-      <div className='shadow-2xl p-10 rounded-lg'>
+      </motion.div>
+      <div className='shadow-2xl  p-10 rounded-lg'>
         <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className='flex flex-col' name="google-sheet">
           <label htmlFor='name'>Name</label>
           <input 
@@ -84,7 +104,7 @@ const Contact = () => {
           </Button>
         </form>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

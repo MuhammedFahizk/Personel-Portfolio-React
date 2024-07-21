@@ -14,4 +14,18 @@
   font-weight: bold;
   font-style: normal;
 }
+.custom-tab-active {
+  background-color: #333; /* Dark background for active tab */
+  color: #fff; /* White text for active tab */
+}
+
+.custom-tab {
+  background-color: #555; /* Background color for inactive tabs */
+  color: #ccc; /* Text color for inactive tabs */
+}
+
+.custom-tab:hover {
+  background-color: #444; /* Slightly lighter background on hover */
+  color: #fff; /* White text on hover */
+}
 

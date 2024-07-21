@@ -46,18 +46,18 @@ const Contact = () => {
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, threshold: 0.8 }}
-     className='grid  md:grid-cols-2 h-screen items-center grid-cols-1 md:mx-20 gap-6 my-5 border rounded-lg p-10 text-black dark:text-white'>
+     className='grid  md:grid-cols-2 h-screen items-center grid-cols-1 md:mx-20 gap-6 my-5 border rounded-lg md:p-10 p-5   text-center md:text-start  text-black dark:text-white'>
       <motion.div
       variants={cardVariants}
-       className='mr-10'>
-        <p>Contact Us</p>
+       className='md:mr-10  text-center md:text-start'>
+        <p className='text-[#A6A001]'>Contact Us</p>
         <h1 className='text-2xl font-bold'>Get In Touch With Us</h1>
-        <p className='text-md font-semibold my-4 me-20'>
+        <p className='text-md font-semibold my-4 md:me-20 mx-4 md:mx-0 text-center md:text-start  '>
           Hello! My name is Muhammed Fahiz k, and I'm a MERN Stack Developer from Calicut. I graduated with a BCA from the University of Calicut.
         </p>
         <SocialMEdiaLinks/>
       </motion.div>
-      <div className='shadow-2xl  p-10 rounded-lg'>
+      <div className='shadow-2xl  md:p-10 p-5 rounded-lg'>
         <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className='flex flex-col' name="google-sheet">
           <label htmlFor='name'>Name</label>
           <input 
@@ -94,14 +94,19 @@ const Contact = () => {
           />
           {errors.message && <span className='text-red-500'>{errors.message.message}</span>}
 
-          <Button 
-            type='primary'
+          <motion.button 
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          className='bg-[#A6A001] text-white font-bold py-2 px-
+
+          4 rounded-md hover:bg-[#c7c111] hover:text-white transition-all duration
+            -300 ease-in-out' type='submit'
+           
             htmlType='submit'
-            className='bg-blue-500 text-white p-2 rounded'
             loading={loading}
           >
             {loading ? 'Submitting...' : 'Submit'}
-          </Button>
+          </motion.button >
         </form>
       </div>
     </motion.div>

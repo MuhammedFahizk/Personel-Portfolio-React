@@ -12,6 +12,7 @@ import AboutMe from "./Pages/AboutMe";
 import Nav from "./Component/Nav";
 import Contact from "./Component/Contact";
 import Projects from "./Pages/Projects";
+import { FloatButton } from "antd";
 function App() {
   const { scrollYProgress } = useScroll()
 
@@ -67,6 +68,7 @@ function App() {
       </motion.svg>
     
      <RouterProvider router={router} />
+     <FloatButton.BackTop/>
 
     </>
   )

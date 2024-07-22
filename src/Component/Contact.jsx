@@ -59,8 +59,8 @@ const Contact = () => {
         <SocialMEdiaLinks/>
       </motion.div>
       <div className='shadow-2xl  md:p-10 p-5 rounded-lg'>
-        <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className='flex flex-col' name="google-sheet">
-          <label htmlFor='name'>Name</label>
+        <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className='flex flex-col dark:text-black' name="google-sheet">
+          <label className='dark:text-white' htmlFor='name'>Name</label>
           <input 
             id='name'
             name='name'
@@ -70,7 +70,7 @@ const Contact = () => {
           />
           {errors.name && <span className='text-red-500'>{errors.name.message}</span>}
 
-          <label htmlFor='email'>Email</label>
+          <label className='dark:text-white' htmlFor='email'>Email</label>
           <input 
             id='email'
             name='email'
@@ -86,7 +86,7 @@ const Contact = () => {
           />
           {errors.email && <span className='text-red-500'>{errors.email.message}</span>}
 
-          <label htmlFor='message'>Message</label>
+          <label className='dark:text-white' htmlFor='message'>Message</label>
           <textarea 
             id='message'
             name='message'

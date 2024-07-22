@@ -6,6 +6,7 @@ import SocialMEdiaLinks from './SocialMEdiaLinks';
 import { motion } from 'framer-motion';
 const Contact = () => {
   const scriptUrl = import.meta.env.VITE_SCRIPT_URL;
+  console.log(scriptUrl);
   const formRef = useRef(null);
   const [loading, setLoading] = useState(false);
 
@@ -16,7 +17,7 @@ const Contact = () => {
     fetch(scriptUrl, { method: 'POST', body: new FormData(formRef.current) })
       .then(res => {
         setLoading(false);
-        message.success('Successfully submitted!');
+        message.success('SUCCESSFULLY SUBMITTED');
         console.log("SUCCESSFULLY SUBMITTED");
         reset(); // Clear form fields after successful submission
       })

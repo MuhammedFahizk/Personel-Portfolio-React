@@ -46,7 +46,7 @@ const Contact = () => {
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, threshold: 0.8 }}
-     className='grid  md:grid-cols-2 h-screen items-center grid-cols-1 md:mx-20 gap-6 my-5 border rounded-lg md:p-10 p-5   text-center md:text-start  text-black dark:text-white'>
+     className='grid  md:grid-cols-2 h-fit mt-24 items-center grid-cols-1 md:mx-20 gap-6 my-5 border rounded-lg md:p-10 p-5   text-center md:text-start  text-black dark:text-white'>
       <motion.div
       variants={cardVariants}
        className='md:mr-10  text-center md:text-start'>
@@ -94,19 +94,15 @@ const Contact = () => {
           />
           {errors.message && <span className='text-red-500'>{errors.message.message}</span>}
 
-          <motion.button 
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className='bg-[#A6A001] text-white font-bold py-2 px-
+       
+           <button 
 
-          4 rounded-md hover:bg-[#c7c111] hover:text-white transition-all duration
-            -300 ease-in-out' type='submit'
-           
-            htmlType='submit'
+            type='submit'
+            className='bg-[#A6A001] text-white font-bold py-2 px-4 rounded-md hover:bg-[#c7c111] hover:scale-110 hover:text-white transition-all duration-300 ease-in-out' 
             loading={loading}
           >
             {loading ? 'Submitting...' : 'Submit'}
-          </motion.button >
+          </button>
         </form>
       </div>
     </motion.div>

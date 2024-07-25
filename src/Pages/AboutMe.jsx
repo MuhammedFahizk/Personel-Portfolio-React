@@ -13,7 +13,7 @@ const AboutMe = () => {
   const icons = [
     {
       icon: FaGithub,
-      link: "https://github.com/fahiz-mavoor",
+      link: "https://github.com/MuhammedFahizk",
       color: '#FFFFFF'
     },
     {

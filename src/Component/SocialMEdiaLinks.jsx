@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 const SocialMEdiaLinks = () => {
   return (
     <div className='flex  gap-3 my-4  justify-center md:justify-start  '>
-    <a href="https://github.com/fahiz-mavoor" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/MuhammedFahizk" target="_blank" rel="noopener noreferrer">
         <FaGithub className='text-2xl hover:text-gray-400 transition-transform duration-300 transform hover:scale-125' />
       </a>
       <a href="https://www.linkedin.com/in/muhammed-fahiz-96726b287/" target="_blank" rel="noopener noreferrer">

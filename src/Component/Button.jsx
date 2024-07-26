@@ -10,7 +10,7 @@ const Button = ({ value, backgroundColor = '#A6A001', to, size = 'sm', showArrow
   };
 
   return (
-    <Link to={to ? to :'/about'} className='flex items-center '>
+    <Link to={to ? to :'/Contact'} className='flex items-center '>
       <div 
         className={`rounded-full flex items-center justify-center absolute z-10  ${sizeClasses[size]}`}
         style={{ backgroundColor }}

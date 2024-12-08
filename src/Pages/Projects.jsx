@@ -1,12 +1,20 @@
 import React, { useState } from "react";
-import { Card } from "antd";
+import { Card, Modal, Button } from "antd";
 import Nav from "../Component/Nav";
-import { Avatar } from 'antd';
-import { Link } from "react-router-dom";
 const { Meta } = Card;
 
 // Project items
 const items = [
+  {
+    id: 11,
+    title: "Chat Hive",
+    image: "../images/ChatHive.png",
+    type: "major",
+    link: 'https://chathivemedia.vercel.app/',
+    subtitle: "Full-Stack Social Media Application with Admin Panel",
+    description:
+      " Description: A dynamic social media platform built using the MERN stack (MongoDB, Express, React, Node.js) following the MVC architecture. The platform features secure user authentication via JWT (JSON Web Token) and supports role-based access for admins and users. Users can engage in real-time messaging with Socket.IO, post feeds, share stories, write blogs, and interact through comments and likes. Additionally, users have the ability to report inappropriate content or users and hide posts they do not wish to see. Admins have full control to manage users, posts, reports, and notifications. The website is fully responsive thanks to Tailwind CSS, and ESLint ensures high code quality and consistency throughout the project."  },
+ 
   {
     id: 10,
     title: "Drive Wave",
@@ -18,6 +26,35 @@ const items = [
       "Drive Wave is a car rental website designed to provide a seamless experience for users looking to rent vehicles. Built using modern web technologies such as Node.js, Express, MongoDB, and Handlebars (HBS), Drive Wave offers robust backend management paired with an intuitive user interface, catering to customers, administrators, and vendors. The platform not only allows users to rent cars but also enables third-party car owners to list and manage their vehicles, expanding the range of available options for renters.",
   },
   {
+    id: 21,
+    title: "AuthCore",
+    type: "major",
+    image: "../images/AuthCore.png",
+    description:
+      "AuthCore is a secure and scalable authentication system built using the MERN stack (MongoDB, Express, React, Node.js). It leverages JWT (JSON Web Tokens) for secure authentication and implements a robust system with access and refresh tokens for session management. The backend is designed to follow RESTful principles, while the frontend integrates authentication flows seamlessly with Axios interceptors to handle token refreshing automatically. This system ensures high performance, secure user access, and a smooth developer experience.",
+    subtitle: "Advanced MERN Authentication System with JWT and Axios Interceptors",
+  },
+
+
+  {
+    id: 22,
+    title: "Spotify Clone",
+    type: "major",
+    image: "../images/SpotifyClone.png",
+    description:
+      "A responsive Spotify frontend clone built using React, featuring seamless integration with Spotify's original API for music-related functionalities such as fetching tracks, albums, and artist details. User authentication and playlist management are handled through a custom backend built with Node.js and Express, using JWT for secure access and refresh tokens for session management. User-generated playlists are stored in a dedicated database, while all music streaming and browsing data are fetched directly from Spotify's API, ensuring a rich and authentic user experience.",
+    subtitle: "Spotify Frontend Clone with Custom User Management and Spotify API Integration",
+  },
+  {
+    id: 23,
+    title: "Countdown Timer Shopify App",
+    type: "mini",
+    image: "../images/CountdownTimerApp.png",
+    description:
+      "The Countdown Timer Shopify App allows Shopify merchants to create customizable countdown timers to display promotions and discounts on product pages. Built using the MERN stack, it features a React-based admin interface and integrates seamlessly into Shopify through a theme app extension. It enables merchants to manage timers with unique start and end dates, descriptions, and display options, helping drive customer urgency and boost sales.",
+    subtitle: "Shopify Countdown Timer App with MERN Stack and Theme App Extension",
+  },
+   {
     id: 20,
     image: "../images/portfolio.png",
     type: 'mini',
@@ -78,6 +115,7 @@ const items = [
       "Ajmi is a responsive website created using HTML and CSS. It is a clone of the original Ajmi site, designed to replicate its layout and styling."
   },
   
+  
   {
     id: 80,
     title: 'Netflix',
@@ -131,6 +169,8 @@ const tabListNoTitle = [
 
 const Projects = () => {
   const [activeTabKey, setActiveTabKey] = useState("all");
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [selectedItem, setSelectedItem] = useState(null);
 
   const onTabChange = (key) => {
     setActiveTabKey(key);
@@ -140,6 +180,19 @@ const Projects = () => {
     activeTabKey === "all"
       ? items
       : items.filter((item) => item.type.toLowerCase() === activeTabKey);
+
+  const showModal = (item) => {
+    setSelectedItem(item);
+    setIsModalVisible(true);
+  };
+
+  const handleOk = () => {
+    setIsModalVisible(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalVisible(false);
+  };
 
   return (
     <>
@@ -158,6 +211,7 @@ const Projects = () => {
                 <Card
                   key={item.id}
                   style={{ width: 300 }}
+                  className=" cursor-pointer"
                   cover={
                     <a href={item.link} target="_blank" rel="noopener noreferrer">
                       <img
@@ -167,6 +221,7 @@ const Projects = () => {
                       />
                     </a>
                   }
+                  onClick={() => showModal(item)}
                 >
                   <Meta
                     className="meta-description h-40 dark:text-white"
@@ -179,6 +234,37 @@ const Projects = () => {
           </Card>
         </div>
       </div>
+
+      {/* Ant Design Modal */}
+      <Modal
+        title={selectedItem?.title || "Project Details"}
+        open={isModalVisible}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        footer={[
+          <Button key="back" onClick={handleCancel}>
+            Close
+          </Button>,
+          <Button key="link" type="primary" href={selectedItem?.link} target="_blank">
+            Visit Project
+          </Button>,
+        ]}
+        width={800}
+        centered
+      >
+        {selectedItem && (
+          <div>
+            <img
+              src={selectedItem.image}
+              alt={selectedItem.title}
+              className="w-full h-64 object-cover rounded mb-4"
+            />
+            <h2 className="text-lg font-bold mb-2">{selectedItem.title}</h2>
+            <p className="text-gray-600 mb-4">{selectedItem.subtitle}</p>
+            <p className="text-gray-800">{selectedItem.description}</p>
+          </div>
+        )}
+      </Modal>
     </>
   );
 };

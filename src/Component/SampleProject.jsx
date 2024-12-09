@@ -89,7 +89,7 @@ const SampleProject = () => {
       <h1 className="text-black dark:text-white text-center text-3xl font-bold opacity-35">
         PROJECTS
       </h1>
-      <div className="grid grid-cols-2 gap-4 p-8 md:px-24 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-8 md:px-24 relative">
         {items
           .filter((item) => item.type.toLowerCase() === "project")
           .map((item, index) => (

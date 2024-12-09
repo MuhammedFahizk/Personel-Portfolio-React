@@ -1,11 +1,39 @@
 import { motion } from "framer-motion";
-import { FaHtml5, FaCss3Alt, FaNode, FaReact, FaAws, FaGitAlt, FaGithub } from "react-icons/fa";
+import {
+  FaHtml5,
+  FaCss3Alt,
+  FaNode,
+  FaReact,
+  FaAws,
+  FaGitAlt,
+  FaGithub,
+} from "react-icons/fa";
 import { IoLogoJavascript } from "react-icons/io";
-import { SiExpress, SiMongodb, SiMongoose, SiJsonwebtokens, SiAxios, SiPostman, SiAmazonroute53, SiRazorpay, SiHandlebarsdotjs, SiRedux, SiReduxsaga, SiBootstrap, SiEjs, SiChartdotjs, SiNginx,SiMediamarkt, SiVercel, } from "react-icons/si";
+import {
+  SiExpress,
+  SiMongodb,
+  SiMongoose,
+  SiJsonwebtokens,
+  SiAxios,
+  SiPostman,
+  SiAmazonroute53,
+  SiRazorpay,
+  SiHandlebarsdotjs,
+  SiRedux,
+  SiReduxsaga,
+  SiBootstrap,
+  SiEjs,
+  SiChartdotjs,
+  SiNginx,
+  SiMediamarkt,
+  SiVercel,
+  SiDaisyui,
+  SiNextdotjs,
+} from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FiFigma } from "react-icons/fi";
 import { CiMail, CiFileOn } from "react-icons/ci";
-
+import { TbBrandTypescript } from "react-icons/tb";
 
 const skills = [
   { id: 1, name: "HTML", icon: FaHtml5, color: "#E34F26" },
@@ -23,6 +51,15 @@ const skills = [
   { id: 13, name: "EJS", icon: SiEjs, color: "#A91E50" },
   { id: 14, name: "Media Queries", icon: SiMediamarkt, color: "#47A248" },
   { id: 15, name: "Chart.js", icon: SiChartdotjs, color: "#FF6384" },
+  { id: 16, name: "Typesccript.js", icon: SiChartdotjs, color: "#FF6384" },
+  { id: 16, name: "Typescript.js", icon: TbBrandTypescript, color: "#FF6384" },
+  { id: 17, name: "DaisyUI", icon: SiDaisyui, color: "#1E88E5" },
+  {
+    id: 3,
+    name: "Next.js",
+    icon: SiNextdotjs,
+    color: "#000000",
+  },
 ];
 
 const tools = [
@@ -76,12 +113,22 @@ const Skill = () => {
 
   return (
     <div className="md:mx-20  z-50">
-      <h2 style={{color:'#A6A001',}} className=" text-4xl font-bold mb-6 text-center dark:text-white">Skills</h2>
-      <div  className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
+      <h2
+        style={{ color: "#A6A001" }}
+        className=" text-4xl font-bold mb-6 text-center dark:text-white"
+      >
+        Skills
+      </h2>
+      <div className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
         {renderSkills(skills)}
       </div>
-      <h2 style={{color:'#A6A001'}} className="text-4xl font-bold mb-6 mt-10 text-center dark:text-white">Tools</h2>
-      <div  className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
+      <h2
+        style={{ color: "#A6A001" }}
+        className="text-4xl font-bold mb-6 mt-10 text-center dark:text-white"
+      >
+        Tools
+      </h2>
+      <div className="grid md:grid-cols-4 lg:grid-cols-5 grid-cols-2 gap-1">
         {renderSkills(tools)}
       </div>
     </div>

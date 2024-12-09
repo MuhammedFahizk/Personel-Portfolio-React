@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Card, Modal, Button } from "antd";
 import Nav from "../Component/Nav";
+import { AiOutlineGithub } from "react-icons/ai"; // Import GitHub icon
 const { Meta } = Card;
 
 // Project items
@@ -10,6 +11,7 @@ const items = [
     title: "Chat Hive",
     image: "../images/ChatHive.png",
     type: "major",
+    git: "https://github.com/MuhammedFahizk/Social-Media-Frontend",
     link: 'https://chathivemedia.vercel.app/',
     subtitle: "Full-Stack Social Media Application with Admin Panel",
     description:
@@ -20,6 +22,7 @@ const items = [
     title: "Drive Wave",
     image: "../images/DriveWave.png",
     type: "major",
+    git: "https://github.com/MuhammedFahizk/drive-Wave",
     link: 'https://www.drivewave.site',
     subtitle: "Car rental website node, express, mongodb and hbs",
     description:
@@ -30,6 +33,7 @@ const items = [
     title: "AuthCore",
     type: "major",
     image: "../images/AuthCore.png",
+    git : "https://github.com/MuhammedFahizk/MERN-User-Management",
     description:
       "AuthCore is a secure and scalable authentication system built using the MERN stack (MongoDB, Express, React, Node.js). It leverages JWT (JSON Web Tokens) for secure authentication and implements a robust system with access and refresh tokens for session management. The backend is designed to follow RESTful principles, while the frontend integrates authentication flows seamlessly with Axios interceptors to handle token refreshing automatically. This system ensures high performance, secure user access, and a smooth developer experience.",
     subtitle: "Advanced MERN Authentication System with JWT and Axios Interceptors",
@@ -41,6 +45,7 @@ const items = [
     title: "Spotify Clone",
     type: "major",
     image: "../images/SpotifyClone.png",
+    git: "https://github.com/MuhammedFahizk/TrackVoice",
     description:
       "A responsive Spotify frontend clone built using React, featuring seamless integration with Spotify's original API for music-related functionalities such as fetching tracks, albums, and artist details. User authentication and playlist management are handled through a custom backend built with Node.js and Express, using JWT for secure access and refresh tokens for session management. User-generated playlists are stored in a dedicated database, while all music streaming and browsing data are fetched directly from Spotify's API, ensuring a rich and authentic user experience.",
     subtitle: "Spotify Frontend Clone with Custom User Management and Spotify API Integration",
@@ -50,6 +55,7 @@ const items = [
     title: "Countdown Timer Shopify App",
     type: "mini",
     image: "../images/CountdownTimerApp.png",
+    git: "https://github.com/MuhammedFahizk/countdown-timer",
     description:
       "The Countdown Timer Shopify App allows Shopify merchants to create customizable countdown timers to display promotions and discounts on product pages. Built using the MERN stack, it features a React-based admin interface and integrates seamlessly into Shopify through a theme app extension. It enables merchants to manage timers with unique start and end dates, descriptions, and display options, helping drive customer urgency and boost sales.",
     subtitle: "Shopify Countdown Timer App with MERN Stack and Theme App Extension",
@@ -58,6 +64,7 @@ const items = [
     id: 20,
     image: "../images/portfolio.png",
     type: 'mini',
+    git: "https://github.com/MuhammedFahizk/Personel-Portfolio-React",
     link: 'https://fahiz.vercel.app/',
     title: 'Personal Portfolio Website',
     description: 'Developed a responsive and interactive personal portfolio website from scratch using React and Tailwind CSS to highlight my skills, projects, and professional background.'
@@ -140,31 +147,21 @@ const items = [
     id: 100,
     title: 'kitchen',
     link: 'https://fahiz-mavoor.github.io/kitchen-/',
+
     image: "../images/kitchen.png",
     subtitle: 'Kitchen clone',
     type: 'clone',
+
     description:
       "Kitchen is a responsive website created using HTML and CSS."
   },
 ];
 
 const tabListNoTitle = [
-  {
-    key: "all",
-    label: "All",
-  },
-  {
-    key: "major",
-    label: "Major Project",
-  },
-  {
-    key: "mini",
-    label: "Mini Projects",
-  },
-  {
-    key: "clone",
-    label: "Clone Sites",
-  },
+  { key: "all", label: "All" },
+  { key: "major", label: "Major Project" },
+  { key: "mini", label: "Mini Projects" },
+  { key: "clone", label: "Clone Sites" },
 ];
 
 const Projects = () => {
@@ -211,7 +208,7 @@ const Projects = () => {
                 <Card
                   key={item.id}
                   style={{ width: 300 }}
-                  className=" cursor-pointer"
+                  className="cursor-pointer"
                   cover={
                     <a href={item.link} target="_blank" rel="noopener noreferrer">
                       <img
@@ -245,6 +242,17 @@ const Projects = () => {
           <Button key="back" onClick={handleCancel}>
             Close
           </Button>,
+          selectedItem?.git && (
+            <Button
+              key="git"
+              type="default"
+              href={selectedItem.git}
+              target="_blank"
+              icon={<AiOutlineGithub />}
+            >
+              GitHub
+            </Button>
+          ),
           <Button key="link" type="primary" href={selectedItem?.link} target="_blank">
             Visit Project
           </Button>,
@@ -262,6 +270,19 @@ const Projects = () => {
             <h2 className="text-lg font-bold mb-2">{selectedItem.title}</h2>
             <p className="text-gray-600 mb-4">{selectedItem.subtitle}</p>
             <p className="text-gray-800">{selectedItem.description}</p>
+            {selectedItem.git && (
+              <p className="mt-4">
+                <a
+                  href={selectedItem.git}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-500 flex items-center"
+                >
+                  <AiOutlineGithub className="mr-2" />
+                  View GitHub Repository
+                </a>
+              </p>
+            )}
           </div>
         )}
       </Modal>

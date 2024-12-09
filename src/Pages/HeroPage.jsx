@@ -103,8 +103,7 @@ const HeroPage = () => {
             initial="offscreen"
             animate="onscreen"
             className='md:w-4/6 text-sm'>
-            Design Club is a digital agency specialized in ecommerce. We build scalable, high-end web shops with composable commerce architecture.
-          </motion.p>
+ I'm a MERN Stack Developer passionate about building dynamic web applications and solving problems with efficient, scalable solutions.    </motion.p>
           <motion.div 
             variants={textVariants}
             initial="offscreen"
